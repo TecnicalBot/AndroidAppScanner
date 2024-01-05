@@ -75,7 +75,6 @@ command -v vt >/dev/null 2>&1 || { echo -e >&2 "${RED}virustotal-cli is not inst
 
 # Iterate over files in the directory
 for file in "$scan_directory"/*.apk; do
-  # Check if the file exists
   if [[ -f "$file" ]]; then
     filename=$(basename "$file")
     echo -e "\nScanning file: ${GREEN}$filename${NC}"
